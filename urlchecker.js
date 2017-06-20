@@ -1,6 +1,7 @@
 const { URL } = require('url');
 const dns = require('dns');
 
+
 module.exports = function(rawURL, callback) {
 
 	try {
