@@ -26,10 +26,12 @@ const insertNewLink = function(collection, originalURL, index, callback) {
 
 	});
 };
+
+// exports find\ get short functions
 module.exports.findOriginalUrl = function(db, shortUrl, callback) {
 			let collection = db.collection('links');
 			collection.findOne({shortUrl:parseInt(shortUrl)}, callback);
-	};
+};
 
 
 module.exports.getShortUrl = function(db, originalURL, cb) { 
