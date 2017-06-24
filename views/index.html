@@ -2,6 +2,21 @@
 <html>
 <head>
 	<title>URL Shortener description</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<style>
+		body {
+				margin-left: 10%;
+				margin-right: 10%;
+		}
+		article {
+			width: 100%;
+
+		}
+		form { width: inherit;	}
+		.input { margin: 0  0 auto};
+		fieldset { width: inherit;  }
+		li { line-height: 1.5 }
+	</style>
 </head>
 <body>
 	<h1>URL Shortener description</h1>
@@ -9,15 +24,16 @@
 		<section>
 			<head>
 				<h3>User stories</h3>
+				<ol>
+					<li>I can pass a URL as a parameter via POST method and I will receive a shortened URL in the JSON response. </li>
+					<li>
+						If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+					</li>
+					<li>
+						When I visit that shortened URL, as [my-project-url]/api/shorturl/shorturlnumber it will redirect me to my original link.
+					</li>
+				</ol>
 			</head>
-			<ul>
-				<li>
-					User can pass url.
-				</li>
-				<li>
-					User can link on short url.
-				</li>
-			</ul>
 		</section>
 		<section>
 			<header>
@@ -25,12 +41,17 @@
 
 			</header>
 					<form action="/api/shorturl/new" method="post">
+						<fieldset>
+							<label>Url to short:</label>
+							<input type="text" class="input" name="url">
+							<input type="submit" value="Submit">
+						</fieldset>
 
-						<label>url to short:</label>
-						<input type="text" name="url">
-						<input type="submit" value="Submit">
 					</form>
 		</section>
 	</article>
+	<footer>
+		<a target="_blank" href="https://github.com/Bael/fcc.backend.urlshortener">Source code</a>
+	</footer>
 </body>
 </html>
