@@ -25,12 +25,12 @@
 			<head>
 				<h3>User stories</h3>
 				<ol>
-					<li>I can pass a URL as a parameter via POST method and I will receive a shortened URL in the JSON response. </li>
+					<li>I can pass a URL as a parameter via POST method and I will receive a shortened URL in the JSON response. For example {"short_url":3,"original_url":"https://nanourl.glitch.me/"} </li>
 					<li>
-						If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+						If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.For example {"error":"invalid URL: goldsfsdfpi/shorturl/1"}
 					</li>
 					<li>
-						When I visit that shortened URL, as [my-project-url]/api/shorturl/shorturlnumber it will redirect me to my original link.
+						When I visit that shortened URL, for example <a href="https://nanourl.glitch.me/api/shorturl/1" target="_blank"> https://nanourl.glitch.me/api/shorturl/1 </a> it will redirect me to my original link.
 					</li>
 				</ol>
 			</head>
@@ -49,9 +49,12 @@
 
 					</form>
 		</section>
+    
+    	
+    
 	</article>
 	<footer>
-		<a target="_blank" href="https://github.com/Bael/fcc.backend.urlshortener">Source code</a>
+		<a target="_blank" href="https://github.com/Bael/fcc.backend.urlshortener">Source code on Github.</a>
 	</footer>
 </body>
 </html>
